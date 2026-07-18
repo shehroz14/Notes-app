@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #2563eb;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+}
+
+body.dark {
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --border: #374151;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  padding: 30px 16px;
+}
+
+.app {
+  max-width: 900px;
+  margin: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.theme-btn {
+  border: none;
+  background: var(--card);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.controls,
+.note-form,
+.note {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.controls {
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.controls input,
+.note-form input,
+.note-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 12px;
+  outline: none;
+}
+
+.note-form {
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+.note-form input {
+  margin-bottom: 10px;
+}
+
+.note-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.notes-list {
+  display: grid;
+  gap: 14px;
+}
+
+.note {
+  padding: 16px;
+}
+
+.note.pinned {
+  border-left: 5px solid var(--warning);
+}
+
+.note-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.note-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.note-meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.note-content {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.edit-btn { background: var(--warning); }
+.delete-btn { background: var(--danger); }
+.pin-btn { background: #10b981; }
+
+@media (max-width: 600px) {
+  .topbar,
+  .form-row,
+  .note-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
