@@ -60,6 +60,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  overflow-wrap: break-word;
 }
 
 .controls {
@@ -103,7 +104,7 @@ body {
 
 button {
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   background: var(--primary);
   color: white;
   padding: 10px 14px;
@@ -153,9 +154,21 @@ button {
   gap: 10px;
 }
 
-.edit-btn { background: var(--warning); }
-.delete-btn { background: var(--danger); }
-.pin-btn { background: #10b981; }
+.note-box{
+  border: var(--muted) solid 1px;
+  height: 50px;
+  border-radius:15px ;
+  padding: 10px;
+  gap: 10px;
+}
+
+.edit-btn { background: var(--warning); 
+}
+.delete-btn { background: var(--danger); 
+}
+.pin-btn { background: #10b981; 
+  margin-top: 8px;
+}
 
 @media (max-width: 600px) {
   .topbar,
