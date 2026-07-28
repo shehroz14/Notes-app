@@ -162,6 +162,9 @@ button {
   gap: 10px;
 }
 
+.note {
+  overflow-wrap: break-word;
+}
 .edit-btn { background: var(--warning); 
 }
 .delete-btn { background: var(--danger); 
